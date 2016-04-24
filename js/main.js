@@ -50,15 +50,15 @@ $( document ).ready(function() {
     // then determines the updated vote breakdown to adjust the progress bars.
 
         $('button.vote').on('click', function(){		//  Set up an event listener on the buttons with the `vote` class.
-          var clickVote = $(this).data('vote');
+          var clickedVote = $(this).data('vote');
         
       // When a button is clicked, look at the `data-vote` attribute to determine what the user is voting for ("great" or "greatest").	
           //  Increment the counter for whichever vote talley is affected.
-          if (clickVote == 'great'){					
+          if (clickedVote == 'great'){					
             voteCounts.great++;
             voteCounts.total++;
           }
-          else if (clickVote == 'greatest'){
+          else if (clickedVote == 'greatest'){
             voteCounts.greatest++;
             voteCounts.total++;
           }
